@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+header {
+  width: 100%;
+  background-color: #191919;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5em 2.5em;
+  align-items: baseline;
+}
+
+.header-logo img {
+  max-width: 130px;
+}
+
+.header-menu {
+  display: flex;
+  -moz-column-gap: 2em;
+       column-gap: 2em;
+}
+.header-menu a {
+  color: #fff;
+  font-weight: 300;
+  transition: ease-in-out 0.2s;
+}
+.header-menu a:hover {
+  color: #ff3131;
+  transform: scale(1.1);
+}
+
+.header-icons {
+  display: flex;
+  -moz-column-gap: 2em;
+       column-gap: 2em;
+}
+.header-icons a {
+  color: #fff;
+  transition: ease-in-out 0.2s;
+}
+.header-icons a:hover {
+  color: #ff3131;
+  scale: 1.1;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.bg-header {
+  position: relative;
+  height: 150vh;
+}
+
+.bg-header::before {
+  content: "";
+  background-image: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 50%), url(../assets/bg.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 150vh;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  padding: 1em 0;
+}
+
+.hero-content {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  row-gap: 1em;
+}
+.hero-content h1 {
+  color: #fff;
+  font-size: 3.5em;
+  font-weight: 250;
+}
+.hero-content p {
+  color: #fff;
+  line-height: 130%;
+  font-size: 1.1em;
+}
+.hero-content .hero-btns {
+  display: flex;
+  -moz-column-gap: 1em;
+       column-gap: 1em;
+}
+.hero-content button {
+  padding: 15px 35px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 1em;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  transition: ease-in-out 0.2s;
+}
+.hero-content .shop-now-btn {
+  background-color: #fff;
+  color: black;
+}
+.hero-content .shop-now-btn:hover {
+  background-color: transparent;
+  color: #fff;
+  transform: scaleX(1.1);
+}
+.hero-content .new-collections-btn:hover {
+  background-color: #fff;
+  color: #000;
+  transform: scaleX(1.1);
+}
+
+.sponsorships {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsorships-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 0;
+}
+.sponsorships-content h2 {
+  color: #8b8b8b;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+.sponsorships-logos {
+  display: flex;
+  -moz-column-gap: 3em;
+       column-gap: 3em;
+}
+.sponsorships-logos img {
+  max-width: 100px;
+}
+
+body {
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  position: relative;
+  background-color: #000;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

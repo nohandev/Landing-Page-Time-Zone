@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+@import '../partials/colors';
+@import '../partials/header';
+@import '../partials/layout';
+
+
+body {
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  background-color: $black;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}

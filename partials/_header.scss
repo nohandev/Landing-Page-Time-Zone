@@ -1,0 +1,47 @@
+header {
+  width: 100%;
+  background-color: $gray;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5em 2.5em;
+  align-items: baseline;
+}
+
+.header-logo {
+  img {
+    max-width: 130px;
+  }
+}
+
+.header-menu {
+    display: flex;
+    column-gap: 2em; 
+
+   a {
+    color: $white;
+    font-weight: 300;
+    transition: ease-in-out 0.2s;
+   }
+
+  a:hover {
+    color: $red;
+    transform: scale(1.1);
+  }
+}
+
+.header-icons {
+  display: flex;
+  column-gap: 2em;
+  a {
+    color: $white;
+    transition: ease-in-out 0.2s;
+  }
+
+  a:hover {
+    color: $red;
+    scale: (1.1);
+  }
+}
