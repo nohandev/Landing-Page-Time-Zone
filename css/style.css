@@ -72,7 +72,7 @@ header {
   z-index: -1;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center top;
 }
 
 .hero {
@@ -159,6 +159,81 @@ header {
 }
 .sponsorships-logos img {
   max-width: 100px;
+}
+
+.collection {
+  width: 100%;
+}
+
+.collection-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 3em;
+  color: white;
+}
+
+.collection-title h1 {
+  font-size: clamp(1.5em, 5vw, 2.5em);
+  font-weight: 250;
+}
+
+.collection-selector {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 5em;
+}
+
+.collection-clock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1em;
+  border-radius: 10px;
+  box-shadow: 2px 2px 14px #fff, -2px -2px 14px #fff;
+  max-width: 300px;
+}
+.collection-clock img {
+  max-width: 100%;
+  height: auto;
+}
+.collection-clock p {
+  width: 100%;
+  text-align: center;
+  font-size: clamp(1.5em, 4vw, 2em);
+  border: none;
+  box-shadow: 2px 0px 14px #fff;
+  padding: 5px;
+}
+
+.collection-clock-description {
+  width: 100%;
+  max-width: 675px;
+  line-height: 150%;
+  font-size: clamp(1.5em, 3vw, 1.9em);
+  font-weight: 250;
+  text-align: start;
+}
+
+.collection-prevNext {
+  display: flex;
+  -moz-column-gap: 1em;
+       column-gap: 1em;
+}
+.collection-prevNext button {
+  padding: 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 3px solid #8b8b8b;
+  color: #8b8b8b;
+  font-size: 1em;
+  transition: ease-in-out 0.15s;
+}
+.collection-prevNext button:hover {
+  border: 3px solid #fff;
+  color: #fff;
 }
 
 body {
