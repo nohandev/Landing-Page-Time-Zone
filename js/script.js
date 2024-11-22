@@ -3,52 +3,52 @@ let clockJson = [
   id: 1,
   name: 'Audemars',
   img: '../assets/clocks/audemars.png',
-  description: 'A Audemars Piguet é uma marca de relógios de luxo suíços, famosa por sua inovação e design sofisticado. Fundada em 1875, a marca é reconhecida pela sua habilidade em criar movimentos mecânicos complexos e pela criação do icônico modelo Royal Oak, lançado em 1972. A Audemars Piguet combina tradição e vanguarda, oferecendo relógios de alta precisão e estilo refinado.',
+  description: 'Audemars Piguet is a Swiss luxury watch brand, famous for its innovation and sophisticated design. Founded in 1875, the brand is recognized for its ability to create complex mechanical movements and the creation of the iconic Royal Oak model, launched in 1972. Audemars Piguet combines tradition and avant-garde, offering watches of high precision and refined style.',
   },
 
   {
   id: 2,
   name: 'Omega',
   img: '../assets/clocks/omega.png',
-  description: 'A Omega é uma das marcas mais renomadas do mundo da relojoaria, fundada em 1848 na Suíça. Famosa por sua precisão e inovação, a Omega é conhecida por ser a escolha oficial das missões espaciais da NASA, incluindo a histórica missão Apollo 11, que levou o homem à lua. Modelos como o Speedmaster e o Seamaster são ícones de qualidade e durabilidade.',
+  description: "Omega is one of the most renowned brands in the world of watchmaking, founded in 1848 in Switzerland. Famous for its precision and innovation, Omega is known for being the official choice of NASA's space missions, including the historic Apollo 11 mission, which took man to the moon. Models such as the Speedmaster and Seamaster are icons of quality and durability.",
   },
   {
   id: 3,
   name: 'Patek',
   img: '../assets/clocks/patek.png',
-  description: 'Patek Philippe é uma das marcas de relógios de luxo mais prestigiosas e antigas, fundada em 1839. Conhecida pela excelência em relógios mecânicos, a marca se destaca pela criação de peças de altíssima qualidade, com complicações raras e design refinado. A Patek Philippe é sinônimo de tradição, artesanato e inovação, sendo admirada por colecionadores ao redor do mundo.',
+  description: 'Patek Philippe is one of the most prestigious and longest-running luxury watch brands, founded in 1839. Known for excellence in mechanical watches, the brand stands out for the creation of very high quality pieces, with rare complications and refined design. Patek Philippe is synonymous with tradition, craftsmanship and innovation, and is admired by collectors around the world.',
   },
   {
   id: 4,
   name: 'Rolex',
   img: '../assets/clocks/rolex.png',
-  description: 'Rolex é uma das marcas de relógios de luxo mais famosas e desejadas do mundo, fundada em 1905. A marca é sinônimo de prestígio, precisão e durabilidade. Com modelos icônicos como o Submariner, o Daytona e o Datejust, a Rolex estabeleceu um padrão de excelência em design e funcionalidade, sendo uma referência no mercado de alta relojoaria.',
+  description: 'Rolex is one of the most famous and desired luxury watch brands in the world, founded in 1905. The brand is synonymous with prestige, precision and durability. With iconic models such as the Submariner, the Daytona and the Datejust, Rolex has set a standard of excellence in design and functionality, being a benchmark in the haute horlogerie market.',
   },
   {
   id: 5,
   name: 'TAG Heuer',
   img: '../assets/clocks/tagheuer.png',
-  description: 'TAG Heuer é uma marca suíça reconhecida por sua inovação em cronometragem e design esportivo. Fundada em 1860, a TAG Heuer tem uma forte ligação com o automobilismo, sendo famosa por criar cronógrafos de precisão para pilotos e equipes de corrida. A marca é conhecida por seus relógios de alto desempenho, como o Monaco e o Carrera, combinando estilo e tecnologia.',
+  description: 'TAG Heuer is a Swiss brand recognized for its innovation in timekeeping and sports design. Founded in 1860, TAG Heuer has a strong connection with motorsport, being famous for creating precision chronographs for drivers and racing teams. The brand is known for its high-performance watches, such as the Monaco and Carrera, combining style and technology.',
   },
 ];
 
-
+const select = e => document.querySelector(e)
 let currentIndex = 0;
 
 function updateClockDisplay() {
-  document.getElementById('clockImage').src = clockJson[currentIndex].img;
-  document.getElementById('clockName').textContent = clockJson[currentIndex].name;
-  document.getElementById('clockDescription').textContent = clockJson[currentIndex].description;
+  select('#clockImage').src = clockJson[currentIndex].img;
+  select('#clockName').textContent = clockJson[currentIndex].name;
+  select('#clockDescription').textContent = clockJson[currentIndex].description;
 }
 
-function nextClock() {
-  currentIndex = (currentIndex + 1) % clockJson.length;
+select('.next-btn').addEventListener('click', () => {
+  currentIndex = (currentIndex + 1)
   updateClockDisplay();
-}
+});
 
-function prevClock() {
+select('.prev-btn').addEventListener('click', () => {
   currentIndex = (currentIndex - 1 + clockJson.length) % clockJson.length;
   updateClockDisplay();
-}
+});
 
 window.onload = updateClockDisplay;

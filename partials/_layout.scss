@@ -120,6 +120,7 @@
 
 .collection {
   width: 100%;
+  height: 100vh;
 }
 
 .collection-content {
@@ -194,5 +195,54 @@
   button:hover {
     border: 3px solid $white;
     color: $white;
+  }
+}
+
+.bg-footer {
+  position: relative;
+  height: 100vh;
+  
+}
+
+.bg-footer::before {
+  content: '';
+  background-image:url(../assets/bg-footer.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+
+.footer-content {
+  height: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.footer-message {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  h1 {
+    color: $white;
+    font-size: 3em;
+    font-weight: 250;
+    text-align: start;
+  }
+
+  p {
+    color: $white;
+    font-size: 1em;
+    text-align: start;
   }
 }
